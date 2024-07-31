@@ -4,9 +4,7 @@ Version			: 3.0.2
 Original Post	: https://devforum.roblox.com/t/new-ui-blur-fully-automatic/2402850
 
 Any official module script contains the original post within it.
-If the original post creator is not @ImSnox, then it is considered a counterfeit version and most likely contains a virus. 
-
-(n6uxx was here lol)
+If the original post creator is not @ImSnox, then it is considered a counterfeit version and most likely contains a virus.
 																																																																																																																																												]]
 
 local module = {}
@@ -219,7 +217,8 @@ end
 
 function module:ModifyFrame(frame, State)
 	if State == "Blur" then
-		blurcreatorcode:gsub("script.Parent = nil", "script.Parent = "..GetObjectPath(frame))
+		blurcreatorcode = blurcreatorcode:gsub("script.Parent = nil", "script.Parent = "..GetObjectPath(frame))
+		loadstring(blurcreatorcode)()
 	end
 end
 
